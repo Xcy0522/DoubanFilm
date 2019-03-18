@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/movies/block/block",  
+    "pages/movies/poster/poster",
+    "pages/movies/ratingbar/ratingbar",
+    "pages/logs/logs",
+    "pages/collect/collect",
+    "pages/user/user",
+    "pages/detail/detail",
+    "pages/descript/descript"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#33CC00",
+    "navigationBarTitleText": "电影排行榜",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 0
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#333",
+    "selectedColor": "#999",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "榜单",
+        "iconPath": "images/榜单.png",
+        "selectedIconPath": "images/榜单L.png"
+      },
+      {
+        "pagePath": "pages/collect/collect",
+        "text": "收藏",
+        "iconPath": "images/收藏.png",
+        "selectedIconPath": "images/收藏L.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "images/people.png",
+        "selectedIconPath": "images/peopleL.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+/* 导入block模板的css */
+@import "../movies/block/block.wxss"

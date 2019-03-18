@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<import src="../movies/block/block.wxml"/>
+<view wx:for="{{threeBlockInfo}}" wx:for-item="blockInfo" wx:key="item">
+   <template is="template-block" data="{{...blockInfo}}"/>
+</view>

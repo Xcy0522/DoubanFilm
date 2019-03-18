@@ -1,0 +1,12 @@
+<template name="star_rating">
+  <view class='ratingbar-stars'>
+    <block wx:for="{{[3,5,6,8,9]}}" wx:key="index">
+      <!--全黄星星-->
+      <image wx:if="{{stars/10>=index+1}}" src='/pages/image/ratingbar/star_fill_whole.png' />
+      <!--半黄半灰星星-->
+      <image wx:elif="{{stars/10>=index && stars%10!=0}}" src='/pages/image/ratingbar/star_fill_half.png' />
+      <!--全灰星星-->
+      <image wx:else src='/pages/image/ratingbar/star_fill_none.png' />
+    </block>
+  </view>
+</template>

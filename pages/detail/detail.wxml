@@ -1,0 +1,57 @@
+<view class="wrap" wx:for="{{subjects}}" wx:key="{{index}}">
+<!-- <navigator url="/pages/descript/descript"> -->
+  <view class="rank">
+    NO{{index + 1}}
+  </view>
+      <navigator class="" open-type='switchTab'  url="/pages/detail/detail" hover-class="navigator-hover" >3123
+        <text class='block-more-text'>更多</text>
+      </navigator> 
+
+  <view wx:if="{{item.images}}" class="counter">
+    <view class='l-item'>
+      <image class="l-item-img" src="{{item.images.small}}" mode="widthFix" lazy-load="false" />
+      <image class='collect' data-index='{{index}}'  data-subject="{{item}}" catchtap='catch_collect' mode="widthFix" lazy-load="true" src="{{ item.isCollect? '../../images/collected.png' : '../../images/collect.png'}}"></image>
+    </view>
+    <view class="r-item">
+      <text class="title">{{item.title}}</text>
+      <view class="">
+        星.......
+        <text class="star-word">{{item.rating.average}}星</text>
+      </view>
+      <view class="minute">{{item.durations[0]}}</view>
+      <view class="time">{{item.pubdates[0]}}</view>
+      <view class="plot-name">
+        <view class="plot">{{item.genres}}/
+          <block class="name" wx:for="{{item.casts}}" wx:for-item="Name" wx:key="index">
+            {{Name.name}}/
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+
+   <view wx:elif="{{item.subject}}" class="counter">
+    <view class='l-item'>
+      <image class="l-item-img" src="{{item.subject.images.small}}" mode="widthFix" lazy-load="false" />
+    </view>
+    <view class="r-item">
+      <text class="title">{{item.subject.title}}</text>
+      <view class="">
+        星.......
+        <text class="star-word">{{item.subject.rating.average}}星</text>
+      </view>
+
+      <view class="minute">{{item.subject.durations[0]}}</view>
+      <view class="time">{{item.subject.pubdates[0]}}</view>
+      <view class="plot-name">
+        <view class="plot">{{item.subject.genres}}/
+          <block class="name" wx:for="{{item.subject.casts}}" wx:for-item="Name" wx:key="index">
+            {{Name.name}}/
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- </navigator> -->
+</view>
+<i-load-more wx:if="{{loading_more}}" tip="正在努力加载中" loading="{{ true }}" />
